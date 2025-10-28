@@ -4,16 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BlinkAI Chatbot</title>
+  <style>
+    /* Minimal full-screen layout */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #f5f6fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, sans-serif;
+    }
+
+    /* Simple fade-in animation */
+    .chat-container {
+      animation: fadeIn 0.8s ease-in-out;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <!-- Chatbot widget -->
-  <script 
-    defer
-    src="https://blinkai.co/chatbot/chatbot-widget.js"
-    data-chatbot-uuid="3f965cdc-a9cd-431a-b77f-291606db790d"
-    data-iframe-width="440px"
-    data-iframe-height="700px"
-    data-language="english">
-  </script>
+  <div class="chat-container">
+    <script 
+      defer
+      src="https://blinkai.co/chatbot/chatbot-widget.js"
+      data-chatbot-uuid="3f965cdc-a9cd-431a-b77f-291606db790d"
+      data-iframe-width="440px"
+      data-iframe-height="700px"
+      data-language="english">
+    </script>
+  </div>
 </body>
 </html>
